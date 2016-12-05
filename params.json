@@ -1,0 +1,6 @@
+{
+  "name": "15-462 Assignment 5 - Font Rendering",
+  "tagline": "Lucy Tan | jltan",
+  "body": "### Proposal\r\nFor this assignment, I intend to implement cubic and quadratic Bezier curve rasterization in order to support font rendering. At the very least, the program should be able to render the font as though the font were monotype, with each character taking up a fixed width. However, I hope to be able to also provide some basic kerning and line wrap. \r\n\r\nThis project will most likely be built on top of the Mini-SVG Renderer code from Assignment 1. First, I will have to either implement a font loader or find one to link against. After that, implementation of Bezier curve rasterization, probably by converting explicit Bezier curves into an implicit representation, then evaluating said representation at each sample. Finally, investigation and implementation of character layout handling. \r\n\r\nThe goal will be to produce nice font rendering, such as what you're presumably seeing on your screen right now. In an ideal implementation, perhaps it would produce something like so:\r\n![Hello World!](http://i.imgur.com/AhdxLEy.png)",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

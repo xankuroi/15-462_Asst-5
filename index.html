@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="15-462 Assignment 5 - Font Rendering : Lucy Tan | jltan">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>15-462 Assignment 5 - Font Rendering</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/xankuroi/15-462_Asst-5">View on GitHub</a>
+
+          <h1 id="project_title">15-462 Assignment 5 - Font Rendering</h1>
+          <h2 id="project_tagline">Lucy Tan | jltan</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/xankuroi/15-462_Asst-5/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/xankuroi/15-462_Asst-5/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="proposal" class="anchor" href="#proposal" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Proposal</h3>
+
+<p>For this assignment, I intend to implement cubic and quadratic Bezier curve rasterization in order to support font rendering. At the very least, the program should be able to render the font as though the font were monotype, with each character taking up a fixed width. However, I hope to be able to also provide some basic kerning and line wrap. </p>
+
+<p>This project will most likely be built on top of the Mini-SVG Renderer code from Assignment 1. First, I will have to either implement a font loader or find one to link against. After that, implementation of Bezier curve rasterization, probably by converting explicit Bezier curves into an implicit representation, then evaluating said representation at each sample. Finally, investigation and implementation of character layout handling. </p>
+
+<p>The goal will be to produce nice font rendering, such as what you're presumably seeing on your screen right now. In an ideal implementation, perhaps it would produce something like so:
+<img src="http://i.imgur.com/AhdxLEy.png" alt="Hello World!"></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">15-462 Assignment 5 - Font Rendering maintained by <a href="https://github.com/xankuroi">xankuroi</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
