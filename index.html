@@ -45,7 +45,7 @@
 
 
 <h3><a id="talk" class="anchor" href="#talk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Details</h3>
-<p>The project proved much more difficult than anticipated, and I was unable to finish in time. I wrote a parser for SVG path elements and implemented basic quadratic and cubic Bezier curve rendering. The admittedly inefficient implementation of the renderer resides in software_renderer.cpp. It simply uses the parametric representations of the curves and steps along them for 1000 timesteps. There is no handling for filling the curve at this stage. I didn't have time to test it vigorously, but the implementation seems to work for basic quadratic and cubic Bezier curves. Only a few types of instructions are supported by the renderer - M (moveto), C (cubic bezier), Q (quadratic bezier), L (lineto), and Z (close path). The renderer will simply skip doing any instructions that it does not recognize.</p>
+<p>The project proved much more difficult than anticipated, and I was unable to finish in time. I wrote a parser for SVG path elements and implemented basic quadratic and cubic Bezier curve rendering. The admittedly inefficient implementation of the renderer resides in software_renderer.cpp. It simply uses the parametric representations of the curves and steps along them for 1000 timesteps. There is no handling for filling the curve at this stage. I didn't have time to test it vigorously, but the implementation seems to work for basic quadratic and cubic Bezier curves. Only a few types of instructions are supported by the renderer - M (moveto), C (cubic bezier), Q (quadratic bezier), L (lineto), and Z (close path). The renderer will simply skip doing any instructions that it does not recognize. Additionally, the renderer assumes that each path will only have a single moveto, and that would be at the beginning of the path data. Additional moveto instructions would have to be broken into a new path element. This was actually not my intention, but I only realized this error now while writing this report. </p>
 <p>This extension to the Mini-SVG rasterizer was to use the font loader from FreeType. Though FreeType has its own rasterizer, the FreeType rasterizer would not have been used in this implementation if I had finished it.</p>
 
 <h3><a id="build" class="anchor" href="#build" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Building and Running</h3>
@@ -64,8 +64,8 @@
 
 
 <h3><a id="learned" class="anchor" href="#learned" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What I've Learned</h3>
-<p>There was a lot of interesting material regarding font rendering, and despite hours and hours of pouring over the provided texts, I still haven't grasped all of the concept yet. I did, however, learn a great deal about the SVG file format and the TrueType format as well as about the FreeType library.</p>
-<p>I also learned a lot about my own capabilities. I should have planned out my time better. I went in a bit blind in this regard, and had no idea it would take me so long to learn the concepts and how to use the library I linked. I thought that it would be best to link to an existing loader, but it took me a lot of time to deliberate between a few different options, a lot more than I anticipated. In the end, it took me too much time to just get through the preliminary material, so I did not have time to actually render any fonts.</p>
+<p>There was a lot of interesting material regarding font rendering, and despite hours spent reading the provided texts, I still haven't grasped all of the concepts as firmly as I would have liked. I did learn a great deal about the SVG file format and the TrueType format as well as about the FreeType library.</p>
+<p>I also learned a lot about my own capabilities. I should have planned out my time better. I went in a bit blind in this regard, and didn't think it would take me so long to learn the concepts and how to use the library I linked. I thought that it would be best to link to an existing loader, but it took me a lot of time to deliberate between a few different options, a lot more than I anticipated. In the end, it took me too much time to just get through the preliminary material, so I did not have time to actually render any fonts.</p>
 	   
 	   
       </section>
@@ -75,7 +75,7 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">15-462 Assignment 5 - Font Rendering maintained by <a href="https://github.com/xankuroi">xankuroi</a>
-		<br>Portions of this software are copyright © 2016 The FreeType Project (www.freetype.org).  All rights reserved.</p>
+		</p>
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
